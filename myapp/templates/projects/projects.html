@@ -1,0 +1,44 @@
+{%extends 'projects/layaut.html'%}
+{%load static%}
+
+
+{% block content %}
+<div class="container m-3" >
+      <div>
+            <h1 class="text-center">Projects</h1> 
+      </div>
+      
+</div >
+
+
+<div class="row d-flex justify-content-center">
+      <form method="GET" action="{% url 'project' %}" >
+      {% csrf_token %}
+        <div class="mt-5 justify-content-between offset-md-4">
+            <input type="text" name="query" placeholder="Buscar proyectos...">
+            <button class="btn btn-secondary"type="submit">Buscar</button>
+        </div>
+    </form>
+</div>
+<!----curpo de contenido de projectos----->
+<div class="container  mb-3">
+    <div class="row py-2">
+    {% for p in project %}
+        <div class="col-md-3 m-3">
+            <div class="card" style="width: 100%">
+                <div class="card-body">
+                    <h5 class="card-title text-center">{{ p.name }}</h5>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p>{{p.datecomplet|date:'M j Y:i'}}</p>
+                    <a href="{% url 'project_detail' p.id %}" class="card-link">{{ p.name }}</a>
+                </div>
+            </div>
+        </div>
+      {% endfor %}
+    </div>
+</div>
+
+
+
+{% endblock content %}

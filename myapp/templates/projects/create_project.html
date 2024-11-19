@@ -1,0 +1,16 @@
+{%extends 'projects/layaut.html'%}
+
+{% block content %}
+<div class="container m-5">
+    <h1 class="text-center">Create now Project</h1>
+</div>
+
+<form method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="">
+        Save
+    </button>
+</form>
+
+{% endblock content %}

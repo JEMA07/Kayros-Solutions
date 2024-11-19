@@ -1,0 +1,39 @@
+{%extends 'projects/layaut.html'%} {%load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    {% block content %}
+    <main class="container py-5">
+      <section class="card card-body">
+          <div class="row">
+            <div class="col-md-4 my-auto"  >
+              <img  class=" img-fluid img-md"src="{% static 'imag/tan.jpg'%}" alt="" >
+              </div>
+        <div class="col-md-8 my-auto p-5">
+            <h1 class="display-1 text-center">Tanz Industrie </h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam quisquam explicabo natus magnam ullam maxime expedita odit, officiis porro quia illum est maiores alias eos architecto? Reprehenderit molestiae voluptatibus non odio, in optio accusantium cumque nulla omnis quidem consectetur fuga sunt, error cupiditate similique, officiis esse dolorem tempora sit ipsum neque facere possimus. Quae blanditiis alias, sed ratione rem laborum voluptas veniam deserunt odit excepturi placeat mollitia. Quidem accusamus tempore quae debitis voluptate nam adipisci consequatur cupiditate ad esse. Ratione, deleniti possimus debitis eaque laborum ullam iure obcaecati voluptatum. Explicabo corrupti maiores dolor molestias id laboriosam 
+                sapiente provident ratione mollitia!</p>
+            <a href="{% url 'singup'%}" class="btn btn-primary">registrar</a>
+        </div>
+      </div>
+      </section>
+    </main>
+   {%endblock%}
+</html>
